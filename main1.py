@@ -33,11 +33,9 @@ def buttonClick1():
     set_value("1")  #shortened the code by putting the routine jobs to a function from line27~30
 
 def buttonClick2():
-    global tmp
-    tmp = tmp + "2"
-    ui.label_4.setText(tmp)
+    set_value("2")
 
-def buttonClick3():
+def AC():
     global tmp
     global tmp2
     tmp = ""
@@ -45,10 +43,11 @@ def buttonClick3():
     ui.label_4.setText(tmp)
     ui.label_3.setText(tmp2)
 
+def buttonClick3():
+    set_value("3")
+
 def buttonClick4():
-    global tmp
-    tmp = tmp + "3"
-    ui.label_4.setText(tmp)
+    set_value("4")
 
 def add(): #to sum
     global tmp
@@ -68,12 +67,13 @@ def equal():
     ui.label_3.setText("")
     
 
-ui.pushButton_2.clicked.connect(buttonClick1)
-ui.pushButton_3.clicked.connect(buttonClick2)
-ui.pushButton.clicked.connect(buttonClick3)
-ui.pushButton_4.clicked.connect(buttonClick4)
+ui.pushButton1.clicked.connect(buttonClick1)
+ui.pushButton2.clicked.connect(buttonClick2)
+ui.pushButton.clicked.connect(AC)
+ui.pushButton3.clicked.connect(buttonClick3)
 ui.pushButtonAdd.clicked.connect(add)
 ui.pushButtonEqual.clicked.connect(equal)
+ui.pushButton4.clicked.connect(buttonClick4)
 
 
 widget.show()    #general fixed codes 
